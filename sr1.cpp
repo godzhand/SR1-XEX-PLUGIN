@@ -614,6 +614,7 @@ if (round(x2) == 2.f) {
 					}
 						else if (player2ONLINE == false) { 
 						if (*(int*)(0xC25C27CC) != 0x00) {
+							player2ONLINE = true;
 					std::string name("subtitle_add \"Welcome ");
 				 int i = 0;
 				 while (i < 30) { 
@@ -628,8 +629,6 @@ if (round(x2) == 2.f) {
 		nameR += " 3";
            const char* nNameR = nameR.c_str();
 				ConsoleCommand(nNameR);
-				
-					player2ONLINE = true;
 					if (flash_console_window == true) { 
 				*(uint8_t*)(0x835F4C3E) = 0x01;
 				Sleep(500);
@@ -711,46 +710,9 @@ if (round(x2) == 2.f) {
 							   Sleep(500);
 							
 								}
-										if (char_in_car_height == true) {
-										std::ostringstream convcharheightN;
-                          convcharheightN << char_height;
-                        const std::string charStr(convcharheightN.str());  
-								  std::string crw("set_in_car_character_height ");
-								  crw += charStr;
-			                   const char* crW = crw.c_str();
-				               ConsoleCommand(crW);
-							   Sleep(500);
-							   	std::string crwr("mp_remote_console \"set_in_car_character_height ");
-								crwr += charStr;
-			                   const char* crWr = crwr.c_str();
-				               ConsoleCommand(crWr);
-							    XPhysicalFree(convcharheightN);
-							   Sleep(500);
-								}
-								else { }
-								if (custom_char_ambient == true) {
-				             std::string change_char_ambience("char_ambient ");
-							change_char_ambience += dchar_ambient_r;
-							change_char_ambience += " ";
-							change_char_ambience += dchar_ambient_g;
-							change_char_ambience += " ";
-							change_char_ambience += dchar_ambient_b;
-							    const char* cha = change_char_ambience.c_str();
-   	                             ConsoleCommand(cha);
-								 	Sleep(500);
-									std::string change_char_ambienceR("mp_remote_console \"char_ambient ");
-							change_char_ambienceR += dchar_ambient_r;
-							change_char_ambienceR += " ";
-							change_char_ambienceR += dchar_ambient_g;
-							change_char_ambienceR += " ";
-							change_char_ambienceR += dchar_ambient_b;
-							    const char* chaR = change_char_ambienceR.c_str();
-   	                             ConsoleCommand(chaR);
-							   Sleep(500);
-								}
-								else { }
 					if (flash_console_window == true) { 
 				*(uint8_t*)(0x835F4C3E) = 0x00;
+				Sleep(500);
 				
 				}
 					}
@@ -833,6 +795,7 @@ if (round(x3) == 2.f) {
 					}
 						else if (player3ONLINE == false) { 
 						if (*(int*)(0xC25DD15C) != 0x00) {
+								player3ONLINE = true;
 					std::string name("subtitle_add \"Welcome ");
 				 int i = 0;
 				 while (i < 30) { 
@@ -847,8 +810,8 @@ if (round(x3) == 2.f) {
 		nameR += " 3";
            const char* nNameR = nameR.c_str();
 				ConsoleCommand(nNameR);
-				
-					player3ONLINE = true;
+
+
 					}
 					else {
 			  *(unsigned int*)(0xC25C762F) = 0x7270E0; // generates 19.2 million to purchase clothing
