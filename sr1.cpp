@@ -61,7 +61,7 @@ ConsoleCommandT ConsoleCommand = (ConsoleCommandT)0x8263CB10;
 			bool custom_Jump_height = true;
 			float jump_height = 3.0;
 			bool custom_gravity = true;
-			float gravity = 0.5;
+			std::string gravity = "0.5";
 			bool custom_saturation = false;
 			float saturation = -2.0;
 			bool allow_crouch_walk = false;
@@ -69,13 +69,13 @@ ConsoleCommandT ConsoleCommand = (ConsoleCommandT)0x8263CB10;
 			bool char_in_car_height = true;
 			float char_height = 1.0;
 			bool custom_char_ambient = true;
-		   int dchar_ambient_r = 20;
-		   int dchar_ambient_g = 0;
-		   int dchar_ambient_b = 0;
+		    std::string dchar_ambient_r = "20";
+		    std::string dchar_ambient_g = "0";
+		    std::string dchar_ambient_b = "0";
 		   bool custom_level_ambient = true;
-		   int dlevel_ambient_r = 40;
-		   int dlevel_ambient_g = 40;
-		   int dlevel_ambient_b = 40;
+		    std::string dlevel_ambient_r = "40";
+		    std::string dlevel_ambient_g = "40";
+		    std::string dlevel_ambient_b = "40";
 			bool afk_macro = false; 
 			std::string AFKMSG = "we will be back after these messages!";
 			bool master_door_lock = false;
@@ -121,6 +121,7 @@ void xui(PLDR_DATA_TABLE_ENTRY ModuleHandle){
             player12ONLINE = false;
             player1isinPIT = false;
           bbInitialized = false;
+		  Sleep(10000);
 
 		}
 		else if (XamGetCurrentTitleId() == 0x545107d1) // Saints Row
@@ -211,8 +212,6 @@ if (round(x1) == 2.f) {
            std::string s2(ss2.str());
            pos5 += s2;
 		      pos5 += "y";
-
-
            std::ostringstream ss3;
            ss3 << round(z1);
   std::string s3(ss3.str());
@@ -304,9 +303,9 @@ if (round(x1) == 2.f) {
 								std::string fh("mp_setup_match_host_serves true");
 			                   const char* fH = fh.c_str();
 				               ConsoleCommand(fH);
-							   	std::string fhr("mp_remote_console \"mp_setup_match_host_serves true");
-			                   const char* fHr = fhr.c_str();
-				               ConsoleCommand(fHr);
+							   	//std::string fhr("mp_remote_console \"mp_setup_match_host_serves true");
+			        //           const char* fHr = fhr.c_str();
+				       //        ConsoleCommand(fHr);
 							   Sleep(500);
 							  
 								}
@@ -399,7 +398,38 @@ if (round(x1) == 2.f) {
 								else { }
 								if (SwitchGamertag == true) { } 
 								else { }
-								if (custom_Jump_height == true)  { }
+								if (custom_Jump_height == true)  {
+								std::ostringstream convJumpN;
+                          convJumpN << jump_height;
+                        const std::string satStr(convJumpN.str());  
+								  std::string sw("jump_height ");
+								  sw += satStr;
+			                   const char* sW = sw.c_str();
+				               ConsoleCommand(sW);
+							   Sleep(500);
+							   	std::string swr("mp_remote_console \"jump_height ");
+								swr += satStr;
+			                   const char* sWr = swr.c_str();
+				               ConsoleCommand(sWr);
+							    XPhysicalFree(convJumpN);
+							   Sleep(500);
+								
+								}
+								else { }
+								if (custom_gravity == true)  {
+						      std::string sw("char_gravity_multiplier ");
+								  sw += gravity;
+			                   const char* sW = sw.c_str();
+				               ConsoleCommand(sW);
+							   Sleep(500);
+							   	std::string swr("mp_remote_console \"char_gravity_multiplier ");
+								swr += gravity;
+			                   const char* sWr = swr.c_str();
+				               ConsoleCommand(sWr);
+
+							   Sleep(500);
+								
+								}
 								else { }
 								if (ChangeWeather == true) {
 						  std::ostringstream convWeatherN;
@@ -414,6 +444,7 @@ if (round(x1) == 2.f) {
 								cwr += wStr;
 			                   const char* cWr = cwr.c_str();
 				               ConsoleCommand(cWr);
+							   XPhysicalFree(convWeatherN);
 							   Sleep(500);
 								}
 								else { }
@@ -430,6 +461,7 @@ if (round(x1) == 2.f) {
 								swr += satStr;
 			                   const char* sWr = swr.c_str();
 				               ConsoleCommand(sWr);
+							    XPhysicalFree(convSaturationN);
 							   Sleep(500);
 								} 
 								else { }
@@ -446,69 +478,50 @@ if (round(x1) == 2.f) {
 								crwr += charStr;
 			                   const char* crWr = crwr.c_str();
 				               ConsoleCommand(crWr);
+							    XPhysicalFree(convcharheightN);
 							   Sleep(500);
 								}
 								else { }
 								if (custom_char_ambient == true) {
-					//		std::ostringstream convcColorRed;
-     //                     convcColorRed << dchar_ambient_r;
-     //                   const std::string rch(convcColorRed.str());  
-					//		std::ostringstream convcColorGreen;
-     //                     convcColorGreen << dchar_ambient_g;
-     //                   const std::string gch(convcColorGreen.str()); 
-
-					//std::ostringstream convcColorBlue;
-     //                     convcColorBlue << dchar_ambient_b;
-     //                   const std::string bch(convcColorBlue.str()); 
-					//	 	std::string change_char_ambience("char_ambient ");
-					//		change_char_ambience += rch;
-					//		change_char_ambience += " ";
-					//		change_char_ambience += gch;
-					//		change_char_ambience += " ";
-					//		change_char_ambience += bch;
-					//		    const char* cha = change_char_ambience.c_str();
-   	 //                            ConsoleCommand(cha);
-					//			 	Sleep(500);
-					//				std::string change_char_ambienceR("mp_remote_console \"char_ambient ");
-					//		change_char_ambienceR += rch;
-					//		change_char_ambienceR += " ";
-					//		change_char_ambienceR += gch;
-					//		change_char_ambienceR += " ";
-					//		change_char_ambienceR += bch;
-					//		    const char* chaR = change_char_ambienceR.c_str();
-   	 //                            ConsoleCommand(chaR);
-					//		   Sleep(500);
+				             std::string change_char_ambience("char_ambient ");
+							change_char_ambience += dchar_ambient_r;
+							change_char_ambience += " ";
+							change_char_ambience += dchar_ambient_g;
+							change_char_ambience += " ";
+							change_char_ambience += dchar_ambient_b;
+							    const char* cha = change_char_ambience.c_str();
+   	                             ConsoleCommand(cha);
+								 	Sleep(500);
+									std::string change_char_ambienceR("mp_remote_console \"char_ambient ");
+							change_char_ambienceR += dchar_ambient_r;
+							change_char_ambienceR += " ";
+							change_char_ambienceR += dchar_ambient_g;
+							change_char_ambienceR += " ";
+							change_char_ambienceR += dchar_ambient_b;
+							    const char* chaR = change_char_ambienceR.c_str();
+   	                             ConsoleCommand(chaR);
+							   Sleep(500);
 								}
 								else { }
 								if (custom_level_ambient == true) {
-			/*			std::ostringstream convlColorRed;
-                          convlColorRed << dlevel_ambient_r;
-                        const std::string rl(convlColorRed.str());  
-							std::ostringstream convlColorGreen;
-                          convlColorGreen << dlevel_ambient_g;
-                        const std::string gl(convlColorGreen.str()); 
-
-					std::ostringstream convlColorBlue;
-                          convlColorBlue << dlevel_ambient_b;
-                        const std::string bl(convlColorBlue.str()); 
-						 	std::string change_dlevel_ambience("level_ambient ");
-							change_dlevel_ambience += rl;
+			           	std::string change_dlevel_ambience("level_ambient ");
+							change_dlevel_ambience += dlevel_ambient_r;
 							change_dlevel_ambience += " ";
-							change_dlevel_ambience += gl;
+							change_dlevel_ambience += dlevel_ambient_g;
 							change_dlevel_ambience += " ";
-							change_dlevel_ambience += bl;
+							change_dlevel_ambience += dlevel_ambient_b;
 							    const char* lla = change_dlevel_ambience.c_str();
    	                             ConsoleCommand(lla);
 								 	Sleep(500);
 									std::string change_dlevel_ambienceR("mp_remote_console \"level_ambient ");
-							change_dlevel_ambienceR += rl;
+							change_dlevel_ambienceR += dlevel_ambient_r;
 							change_dlevel_ambienceR += " ";
-							change_dlevel_ambienceR += gl;
+							change_dlevel_ambienceR += dlevel_ambient_g;
 							change_dlevel_ambienceR += " ";
-							change_dlevel_ambienceR += bl;
+							change_dlevel_ambienceR += dlevel_ambient_b;
 							    const char* llaR = change_dlevel_ambienceR.c_str();
    	                             ConsoleCommand(llaR);
-							   Sleep(500);*/
+							   Sleep(500);
 								}
 								else { }
 								if (allow_crouch_walk == true) { }
@@ -698,6 +711,44 @@ if (round(x2) == 2.f) {
 							   Sleep(500);
 							
 								}
+										if (char_in_car_height == true) {
+										std::ostringstream convcharheightN;
+                          convcharheightN << char_height;
+                        const std::string charStr(convcharheightN.str());  
+								  std::string crw("set_in_car_character_height ");
+								  crw += charStr;
+			                   const char* crW = crw.c_str();
+				               ConsoleCommand(crW);
+							   Sleep(500);
+							   	std::string crwr("mp_remote_console \"set_in_car_character_height ");
+								crwr += charStr;
+			                   const char* crWr = crwr.c_str();
+				               ConsoleCommand(crWr);
+							    XPhysicalFree(convcharheightN);
+							   Sleep(500);
+								}
+								else { }
+								if (custom_char_ambient == true) {
+				             std::string change_char_ambience("char_ambient ");
+							change_char_ambience += dchar_ambient_r;
+							change_char_ambience += " ";
+							change_char_ambience += dchar_ambient_g;
+							change_char_ambience += " ";
+							change_char_ambience += dchar_ambient_b;
+							    const char* cha = change_char_ambience.c_str();
+   	                             ConsoleCommand(cha);
+								 	Sleep(500);
+									std::string change_char_ambienceR("mp_remote_console \"char_ambient ");
+							change_char_ambienceR += dchar_ambient_r;
+							change_char_ambienceR += " ";
+							change_char_ambienceR += dchar_ambient_g;
+							change_char_ambienceR += " ";
+							change_char_ambienceR += dchar_ambient_b;
+							    const char* chaR = change_char_ambienceR.c_str();
+   	                             ConsoleCommand(chaR);
+							   Sleep(500);
+								}
+								else { }
 					if (flash_console_window == true) { 
 				*(uint8_t*)(0x835F4C3E) = 0x00;
 				
