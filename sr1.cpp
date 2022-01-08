@@ -47,7 +47,7 @@ ConsoleCommandT ConsoleCommand = (ConsoleCommandT)0x8263CB10;
 			bool allow_single_player = false;
 			bool recoil = true;
 			bool turret_mode = false;
-			bool unlimited_ammo = true;
+			bool unlimited_ammo = false;
 			bool two_player_ranked = true;
 			bool Black_Sprint = false;
 			bool unlimited_Sprint = false;
@@ -62,7 +62,7 @@ ConsoleCommandT ConsoleCommand = (ConsoleCommandT)0x8263CB10;
 			float jump_height = 3.0;
 			bool custom_gravity = true;
 			float gravity = 0.5;
-			bool custom_saturation = true;
+			bool custom_saturation = false;
 			float saturation = -2.0;
 			bool allow_crouch_walk = false;
 			float crouch_walk = 0.2;
@@ -106,7 +106,24 @@ float round(float var)
 void xui(PLDR_DATA_TABLE_ENTRY ModuleHandle){
 	while (true)
 	{
-		if (XamGetCurrentTitleId() == 0x545107d1) // Saints Row
+		if (XamGetCurrentTitleId() == 0xFFFE07D1) // xbDash
+		{
+  bool player2ONLINE = false;
+           player3ONLINE = false;
+           player4ONLINE = false;
+           player5ONLINE = false;
+           player6ONLINE = false;
+           player7ONLINE = false;
+            player8ONLINE = false;
+           player9ONLINE = false;
+            player10ONLINE = false;
+            player11ONLINE = false;
+            player12ONLINE = false;
+            player1isinPIT = false;
+          bbInitialized = false;
+
+		}
+		else if (XamGetCurrentTitleId() == 0x545107d1) // Saints Row
 		{
 			
 			if (bbInitialized == false)
