@@ -9,8 +9,6 @@
 #include <cassert>
 #include <fstream>
 
-using namespace std;
-
 BOOL bbInitialized = false;
 DWORD (__cdecl *XamGetCurrentTitleID)() = (DWORD (__cdecl *)())ResolveFunction("xam.xex", 0x1CF);
 typedef void(__cdecl* ConsoleCommandT)(const char command[]);
@@ -83,6 +81,8 @@ ConsoleCommandT ConsoleCommand = (ConsoleCommandT)0x8263CB10;
 			bool char_ambient_door = true;
 		   bool flash_console_window = true;
 			bool max_players_2 = true;
+			int WeaponsSpawn = 1;
+           std::string jump_heightStr = "3.0";
 void Reset()
 {
 	bbInitialized = false;
@@ -95,7 +95,7 @@ float round(float var)
  
     // Print in string the value of var
     // with two decimal point
-    sprintf(str, "%.1f", var);
+    sprintf(str, "%.2f", var);
  
     // scan string value in var
     sscanf(str, "%f", &var);
@@ -108,7 +108,7 @@ void xui(PLDR_DATA_TABLE_ENTRY ModuleHandle){
 	{
 		if (XamGetCurrentTitleId() == 0xFFFE07D1) // xbDash
 		{
-  bool player2ONLINE = false;
+        bool player2ONLINE = false;
            player3ONLINE = false;
            player4ONLINE = false;
            player5ONLINE = false;
@@ -195,6 +195,72 @@ if (round(x1) == 2.f) {
    	                             ConsoleCommand(claR);
 								 Sleep(500);
 						 }
+						 else if (player1_state == 0xf4c70000) {
+							 std::string gw2;
+							 if (WeaponsSpawn >= 1)
+                            {
+							if (WeaponsSpawn == 1) { 
+                                 gw2 = "give_player_n_weapons 1";
+							}
+								else if (WeaponsSpawn == 2) { 
+									 WeaponsSpawn = WeaponsSpawn - 1;
+                                 gw2 = "give_player_n_weapons 2";
+							}
+	else if (WeaponsSpawn == 3) { 
+		 WeaponsSpawn = WeaponsSpawn - 1;
+                                 gw2 = "give_player_n_weapons 3";
+							}
+		else if (WeaponsSpawn == 4) { 
+			 WeaponsSpawn = WeaponsSpawn - 1;
+                                 gw2 = "give_player_n_weapons 4";
+							}
+			else if (WeaponsSpawn == 5) { 
+				 WeaponsSpawn = WeaponsSpawn - 1;
+                                 gw2 = "give_player_n_weapons 5";
+							}
+							else {
+                              WeaponsSpawn = WeaponsSpawn - 1;
+							   gw2 = "give_player_n_weapons 6";
+							}
+							  const char* wep = gw2.c_str();
+							  ConsoleCommand(wep);
+							   Sleep(500);
+                           }
+						 }
+						 else if (player1_state == 0x11c20000) 
+						 {
+							 	 std::string gw;
+							    if (WeaponsSpawn < 7)
+                           {
+							if (WeaponsSpawn == 1) { 
+                                 gw = "give_player_n_weapons 1";
+								 WeaponsSpawn = WeaponsSpawn + 1;
+							}
+								else if (WeaponsSpawn == 2) { 
+									 WeaponsSpawn = WeaponsSpawn + 1;
+                                 gw = "give_player_n_weapons 2";
+							}
+	else if (WeaponsSpawn == 3) { 
+		 WeaponsSpawn = WeaponsSpawn + 1;
+                                 gw = "give_player_n_weapons 3";
+							}
+		else if (WeaponsSpawn == 4) { 
+			 WeaponsSpawn = WeaponsSpawn + 1;
+                                 gw = "give_player_n_weapons 4";
+							}
+			else if (WeaponsSpawn == 5) { 
+				 WeaponsSpawn = WeaponsSpawn + 1;
+                                 gw = "give_player_n_weapons 5";
+							}
+							else {
+                              WeaponsSpawn = WeaponsSpawn + 1;
+							   gw = "give_player_n_weapons 6";
+							}
+					   const char* wep1 = gw.c_str();
+					   ConsoleCommand(wep1);
+							   Sleep(500);
+                           }
+						 }
 					}
 
 	 if (seePos == true) { 
@@ -228,8 +294,8 @@ if (round(x1) == 2.f) {
 		   if (debug2screen == true) { 
 				ConsoleCommand(nascii);
 		   }
-				 ofstream myfile;
-  myfile.open ("HDD:\\sr1debug.txt", fstream::app);
+				 std::ofstream myfile;
+  myfile.open ("HDD:\\sr1debug.txt", std::fstream::app);
   myfile << ascii;
   myfile.close();
 	 }
@@ -709,6 +775,11 @@ if (round(x2) == 2.f) {
 				               ConsoleCommand(nHr);
 							   Sleep(500);
 							
+								}
+						if (custom_Jump_height == true)  {
+                       /*const char* jH2 = jump_heightStr.c_str();
+				               ConsoleCommand(jH2);
+							  Sleep(500);*/
 								}
 					if (flash_console_window == true) { 
 				*(uint8_t*)(0x835F4C3E) = 0x00;
