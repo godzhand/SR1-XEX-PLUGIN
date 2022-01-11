@@ -428,66 +428,76 @@ void Player::connected()
 	int player_state;
 	//position = reinterpret_cast<char*>(0xC2482510);
 	if (PlayerID == 1) {
-		float x1 = *(float *)0xC2482510; // thank you Zedek and Jif for figuring out the coordinates
-		float y1 = *(float *)0xC2482514;
-		float z1 = *(float *)0xC2482518;
-		int player_state =  *(int*)(0xC25C7E9A);
+		x1 = *(float *)0xC2482510; // thank you Zedek and Jif for figuring out the coordinates
+		y1 = *(float *)0xC2482514;
+		z1 = *(float *)0xC2482518;
+		player_state =  *(int*)(0xC25C7E9A);
 	}
 	else if (PlayerID == 2) { 
-		float x1 = *(float *)0xC25C2480; // thank you Zedek and Jif for figuring out the coordinates
-		float y1 = *(float *)0xC25C2484;
-		float z1 = *(float *)0xC25C2488;
-		int player_state = *(short int*)(0xC25C282A);
+		x1 = *(float *)0xC25C2480; // thank you Zedek and Jif for figuring out the coordinates
+		y1 = *(float *)0xC25C2484;
+		z1 = *(float *)0xC25C2488;
+		player_state = *(int*)(0xC25C282A);
 	}
 	else if (PlayerID == 3) {
-		float x1 = *(float *)0xC25DCE10; // thank you Zedek and Jif for figuring out the coordinates
-		float y1 = *(float *)0xC25DCE14;
-		float z1 = *(float *)0xC25DCE18;
+		x1 = *(float *)0xC25DCE10; // thank you Zedek and Jif for figuring out the coordinates
+		y1 = *(float *)0xC25DCE14;
+		z1 = *(float *)0xC25DCE18;
+		player_state = *(int*)(0xC25D24DA);
 	}
 	else if (PlayerID == 4) { 
-		float x1 = *(float *)0xC25D77A0; // thank you Zedek and Jif for figuring out the coordinates
-		float y1 = *(float *)0xC25D77A4;
-		float z1 = *(float *)0xC25D77A8;
+		x1 = *(float *)0xC25D77A0; // thank you Zedek and Jif for figuring out the coordinates
+		y1 = *(float *)0xC25D77A4;
+		z1 = *(float *)0xC25D77A8;
+		player_state = *(int*)(0xC25D7B4A);
 	}
 	if (PlayerID == 5) {
-		float x5 = *(float *)0xC25DCE10; // thank you Zedek and Jif for figuring out the coordinates
-		float y5 = *(float *)0xC25DCE14;
-		float z5 = *(float *)0xC25DCE18;
+		x1 = *(float *)0xC25DCE10; // thank you Zedek and Jif for figuring out the coordinates
+		y1 = *(float *)0xC25DCE14;
+		z1 = *(float *)0xC25DCE18;
+		player_state = *(int*)(0xC25DD1BA);
 	}
 	else if (PlayerID == 6) { 
-		float x1 = *(float *)0xC25E1DE0; // thank you Zedek and Jif for figuring out the coordinates
-		float y1 = *(float *)0xC25E1DE4;
-		float z1 = *(float *)0xC25E1DE8;
+		x1 = *(float *)0xC25E1DE0; // thank you Zedek and Jif for figuring out the coordinates
+		y1 = *(float *)0xC25E1DE4;
+		z1 = *(float *)0xC25E1DE8;
+		player_state = *(int*)(0xC25E218A);
 	}
 	else if (PlayerID == 7) {
-		float x1 = *(float *)0xC25E7450; // thank you Zedek and Jif for figuring out the coordinates
-		float y1 = *(float *)0xC25E7454;
-		float z1 = *(float *)0xC25E7458;
+		x1 = *(float *)0xC25E7450; // thank you Zedek and Jif for figuring out the coordinates
+		y1 = *(float *)0xC25E7454;
+		z1 = *(float *)0xC25E7458;
+		player_state = *(int*)(0xC25E77FA);
 	}
 	else if (PlayerID == 8) { 
-		float x1 = *(float *)0xC25E1DE0; // thank you Zedek and Jif for figuring out the coordinates
-		float y1 = *(float *)0xC25E1DE4;
-		float z1 = *(float *)0xC25E1DE8;
+		x1 = *(float *)0xC25E1DE0; // thank you Zedek and Jif for figuring out the coordinates
+		y1 = *(float *)0xC25E1DE4;
+		z1 = *(float *)0xC25E1DE8;
+		player_state = *(int*)(0xC25ECE6A);
 	}
 	if (PlayerID == 9) {
-		float x1 = *(float *)0xC25E1DE0; // thank you Zedek and Jif for figuring out the coordinates
-		float y1 = *(float *)0xC25E1DE4;
-		float z1 = *(float *)0xC25E1DE8;
+		x1 = *(float *)0xC25E1DE0; // thank you Zedek and Jif for figuring out the coordinates
+		y1 = *(float *)0xC25E1DE4;
+		z1 = *(float *)0xC25E1DE8;
+		player_state = *(int*)(0xC25F1E3A);
 	}
 	else if (PlayerID == 10) { 
-		float x1 = *(float *)0xC25F7100; // thank you Zedek and Jif for figuring out the coordinates
-		float y1 = *(float *)0xC25F7104;
-		float z1 = *(float *)0xC25F7108;
+		x1 = *(float *)0xC25F7100; // thank you Zedek and Jif for figuring out the coordinates
+		y1 = *(float *)0xC25F7104;
+		z1 = *(float *)0xC25F7108;
+		player_state = *(int*)(0xC25F74AA);
 	}
 	else if (PlayerID == 11) {
-		float x1 = *(float *)0xC25FC770; // thank you Zedek and Jif for figuring out the coordinates
-		float y1 = *(float *)0xC25FC774;
-		float z1 = *(float *)0xC25FC778;
+		x1 = *(float *)0xC25FC770; // thank you Zedek and Jif for figuring out the coordinates
+		y1 = *(float *)0xC25FC774;
+		z1 = *(float *)0xC25FC778;
+		player_state = *(int*)(0xC25FCB1A);
 	}
 	else if (PlayerID == 12) { 
-		float x1 = *(float *)0xC25FC770; // thank you Zedek and Jif for figuring out the coordinates
-		float y1 = *(float *)0xC25FC774;
-		float z1 = *(float *)0xC25FC778;
+		x1 = *(float *)0xC25FC770; // thank you Zedek and Jif for figuring out the coordinates
+		y1 = *(float *)0xC25FC774;
+		z1 = *(float *)0xC25FC778;
+		player_state = *(int*)(0xC260C7CA);
 	}
 	if (seePlayer1State == true) { 
 		std::string pState("subtitle_add \"player state ");
