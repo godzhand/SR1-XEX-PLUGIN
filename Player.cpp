@@ -112,25 +112,25 @@ void Player::connecting()
 			name += reinterpret_cast<char*>(0xC25D23A1 + i);
 		}
 		else if (PlayerID == 6) { 
-			name += reinterpret_cast<char*>(0xC25D23A1 + i);
+			name += reinterpret_cast<char*>(0xC25E2051 + i);
 		}
 		else if (PlayerID == 7) {
-			name += reinterpret_cast<char*>(0xC25D23A1 + i);
+			name += reinterpret_cast<char*>(0xC25E76C1 + i);
 		}
 		else if (PlayerID == 8) { 
-			name += reinterpret_cast<char*>(0xC25D23A1 + i);
+			name += reinterpret_cast<char*>(0xC25ECD31 + i);
 		}
 		if (PlayerID == 9) {
-			name += reinterpret_cast<char*>(0xC25D23A1 + i);
+			name += reinterpret_cast<char*>(0xC25F1D01 + i);
 		}
 		else if (PlayerID == 10) { 
-			name += reinterpret_cast<char*>(0xC25D23A1 + i);
+			name += reinterpret_cast<char*>(0xC25F7371 + i);
 		}
 		else if (PlayerID == 11) {
-			name += reinterpret_cast<char*>(0xC25D23A1 + i);
+			name += reinterpret_cast<char*>(0xC25FC9E1 + i);
 		}
 		else if (PlayerID == 12) { 
-			name += reinterpret_cast<char*>(0xC25D23A1 + i);
+			name += reinterpret_cast<char*>(0xC260C691 + i);
 		}
 		i++;
 	}
