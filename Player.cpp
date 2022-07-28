@@ -747,14 +747,8 @@ Restart:
 		wsacon += "\" 3";
 		const char* Nwsacon = wsacon.c_str();
 		ConsoleCommand2(Nwsacon);
-		///const char* ReturnBuffer;
-		//string ConIRC = "PASS oauth:bu1vqoikefnlbfy8lois6i3ryzt1sa\r\nNICK xgodzhand\r\n";
-		string ConIRC = "PASS oauth:vhjqi4o3ae9anenqbbnsm1d9d98jrr\r\nNICK slimeballsr\r\n";
-		gamertag = "slimeballs";
-		//string ConIRC = "PASS oauth:2zsd8nf7rskro0iykt00esuagkupu6\r\nNICK Ricsow2\r\n";
-		//gamertag = "Ricsow2";
-		//"PASS oauth:mku3dhsgyfp5ggrt9h71liofip7iis\r\nNICK xgodzhand\r\n";
-		//"PASS oauth:bu1vqoikefnlbfy8lois6i3ryzt1sa\r\nNICK xgodzhand\r\n";
+                string ConIRC = "PASS oauth:xhjqi4o2ae9anenqbbssm1d9d98jgg\r\nNICK twitchIDr\r\n";
+		gamertag = "twitchID";
 		//string ConIRC = "NICK " + gamertag + "\r\nUSER " + gamertag + " 0 * :Saints Row Client\r\n";
 		//NetDll_send(XNCALLER_SYSAPP, Sock, requestExample, 255, 0);
 		int ReadBytes = 0;
