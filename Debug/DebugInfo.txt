@@ -1,0 +1,2 @@
+Starting up network
+Network started, wait for 6 seconds

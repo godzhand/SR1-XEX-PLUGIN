@@ -1,0 +1,16 @@
+HTTP/1.1 301 Moved Permanently
+Date: Sat, 15 Jan 2022 23:34:18 GMT
+Server: Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/8.0.3
+Location: https://tha-row.net/index.php
+Content-Length: 338
+Content-Type: text/html; charset=iso-8859-1
+
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>301 Moved Permanently</title>
+</head><body>
+<h1>Moved Permanently</h1>
+<p>The document has moved <a href="https://tha-row.net/index.php">here</a>.</p>
+<hr>
+<address>Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/8.0.3 Server at tha-row.net Port 80</address>
+</body></html>

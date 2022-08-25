@@ -1,0 +1,186 @@
+﻿Build started 8/25/2022 2:05:59 PM.
+Project "C:\downloads\sr1\sr1\sr1\sr1.vcxproj" on node 2 (build target(s)).
+InitializeBuildStatus:
+  Creating "Debug\sr1.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  All outputs are up-to-date.
+  C:\Program Files (x86)\Microsoft Xbox 360 SDK\bin\win32\CL.exe /c /I..\xkelib /I..\..\DXUT\Core /Zi /nologo /W0 /WX- /Od /D _DEBUG /D _XBOX /GF- /Gm /MTd /GS- /Gy- /fp:fast /fp:except- /Zc:wchar_t /Zc:forScope /GR- /openmp- /Yu"StdAfx.h" /Fp"C:\downloads\sr1\sr1\sr1\Debug\sr1.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /TP /showIncludes Player.cpp /callcap /FI"C:\Program Files (x86)\Microsoft Xbox 360 SDK\\include\xbox\xbox_intellisense_platform.h"
+  Player.cpp
+  Note: including file: c:\downloads\sr1\sr1\sr1\Player.h
+  Note: including file:  C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\string
+  Note: including file:   C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\istream
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\ostream
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\ios
+  Note: including file:      C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xlocnum
+  Note: including file:       C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\climits
+  Note: including file:        C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\yvals.h
+  Note: including file:         C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\crtdefs.h
+  Note: including file:         C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\use_ansi.h
+  Note: including file:       C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\cmath
+  Note: including file:        C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\math.h
+  Note: including file:       C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\cstdio
+  Note: including file:       C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\cstdlib
+  Note: including file:       C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\streambuf
+  Note: including file:        C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xiosbase
+  Note: including file:         C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xlocale
+  Note: including file:          C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\cstring
+  Note: including file:          C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\stdexcept
+  Note: including file:           C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\exception
+  Note: including file:            C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xstddef
+  Note: including file:             C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\cstddef
+  Note: including file:              C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\stddef.h
+  Note: including file:               C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\crtdefs.h
+  Note: including file:           C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xstring
+  Note: including file:            C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xmemory
+  Note: including file:             C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\new
+  Note: including file:             C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xutility
+  Note: including file:              C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\utility
+  Note: including file:               C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\iosfwd
+  Note: including file:                C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\cwchar
+  Note: including file:                 C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\wchar.h
+  Note: including file:                  C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\crtdefs.h
+  Note: including file:                C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\crtdbg.h
+  Note: including file:                 C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\crtdefs.h
+  Note: including file:               C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\type_traits
+  Note: including file:                C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\limits
+  Note: including file:                 C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\ymath.h
+  Note: including file:                 C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\cfloat
+  Note: including file:                C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xtr1common
+  Note: including file:                C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap
+  Note: including file:                 C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:                  C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxtype_traits
+  Note: including file:                 C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:                  C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxtype_traits
+  Note: including file:                 C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:                  C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxtype_traits
+  Note: including file:                 C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:                  C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxtype_traits
+  Note: including file:                 C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:                  C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxtype_traits
+  Note: including file:                 C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:                  C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxtype_traits
+  Note: including file:                 C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:                  C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxtype_traits
+  Note: including file:                 C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:                  C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxtype_traits
+  Note: including file:                 C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:                  C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxtype_traits
+  Note: including file:                 C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:                  C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxtype_traits
+  Note: including file:                 C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:                  C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxtype_traits
+  Note: including file:          C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\typeinfo
+  Note: including file:          C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xlocinfo
+  Note: including file:           C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xlocinfo.h
+  Note: including file:            C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\locale.h
+  Note: including file:             C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\crtdefs.h
+  Note: including file:          C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xdebug
+  Note: including file:         C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\system_error
+  Note: including file:          C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\cerrno
+  Note: including file:           C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\errno.h
+  Note: including file:            C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\crtdefs.h
+  Note: including file:         C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\share.h
+  Note: including file: C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\iostream
+  Note: including file: c:\downloads\sr1\sr1\sr1\Tools.h
+  Note: including file: c:\downloads\sr1\sr1\sr1\global.h
+  Note: including file: C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\cstdint
+  Note: including file:  C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\stdint.h
+  Note: including file: C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\sstream
+  Note: including file: C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\fstream
+  Note: including file: C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\winsockx.h
+  Note: including file: C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\vector
+  Note: including file:  C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\memory
+  Note: including file:   C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:   C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:   C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:    C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfwrap1
+  Note: including file:     C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xxshared
+  Note: including file:  C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\xfunctional
+  Note: including file: c:\downloads\sr1\sr1\sr1\MD5X.h
+  Note: including file: C:\Program Files (x86)\Microsoft Xbox 360 SDK\include\xbox\algorithm
+Link:
+  C:\Program Files (x86)\Microsoft Xbox 360 SDK\bin\win32\link.exe /ERRORREPORT:PROMPT /OUT:"C:\downloads\sr1\sr1\sr1\Debug\sr1.exe" /INCREMENTAL /NOLOGO /LIBPATH:..\xkelib d3d9d.lib d3dx9d.lib xgraphicsd.lib xboxkrnl.lib xnetd.lib xmcored.lib xbdm.lib vcompd.lib xaudio2.lib xmahald.lib xact3.lib x3daudio.lib /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\downloads\sr1\sr1\sr1\Debug\sr1.pdb" /STACK:"262144","262144" /TLBID:1 /IMPLIB:"C:\downloads\sr1\sr1\sr1\Debug\sr1.lib" Debug\Detour.obj
+  Debug\Player.obj
+  Debug\sock.obj
+  Debug\sr1.obj
+  Debug\stdafx.obj
+  Debug\Tools.obj
+  Debug\Util.obj
+  Debug\wave.obj /ignore:4089 /dll /ALIGN:128,4096 /XEX:NO
+ImageXex:
+  C:\Program Files (x86)\Microsoft Xbox 360 SDK\bin\win32\imagexex.exe /out:"C:\downloads\sr1\sr1\sr1\Debug\sr1.xex" /config:"sr1.xml" "C:\downloads\sr1\sr1\sr1\Debug\sr1.exe" 
+  Microsoft(R) Xbox 360 Image File Builder Version 2.0.21256.0
+  (c)2012 Microsoft Corporation. All rights reserved.
+  
+FinalizeBuildStatus:
+  Deleting file "Debug\sr1.unsuccessfulbuild".
+  Touching "Debug\sr1.lastbuildstate".
+Done Building Project "C:\downloads\sr1\sr1\sr1\sr1.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:03.51

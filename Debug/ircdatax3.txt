@@ -1,0 +1,14 @@
+:aed503ca64dc NOTICE * :*** Looking up your hostname...
+:aed503ca64dc NOTICE * :*** Couldn't resolve your hostname; using your IP address instead
+:IRC7 001 >ravi :Welcome to the IRC7 Chat Network server >ravi
+:IRC7 002 >ravi :Your host is IRC7, running version 5.5.1
+:IRC7 003 >ravi :This server was created Sep 19 2021 at 15:33:03 GMT
+:IRC7 004 >ravi IRC7 5.5.1 aioxz abcdefhiklmnoprstuvxyz
+:IRC7 251 >ravi :There are 408 users and 364 invisible on 1 servers
+:IRC7 252 >ravi 0 :operator(s) online
+:IRC7 253 >ravi 308 :unknown connection(s)
+:IRC7 254 >ravi 3 :channels formed
+:IRC7 255 >ravi :I have 408 clients and 0 servers
+:IRC7 265 >ravi :Current local users: 408 Max: 9
+:IRC7 266 >ravi :Current global users: 408 Max: 9
+:IRC7 422 >ravi :MOTD File is missing

@@ -1,0 +1,333 @@
+HTTP/1.1 200 OK
+Date: Sun, 16 Jan 2022 01:52:31 GMT
+Server: Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/8.0.3
+X-Powered-By: PHP/8.0.3
+Set-Cookie: PHPSESSID=k0q6qoncs9lieldjnmfqbf0d2p; path=/
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Cache-Control: no-store, no-cache, must-revalidate
+Pragma: no-cache
+Transfer-Encoding: chunked
+Content-Type: text/html; charset=UTF-8
+
+20df
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+<link rel="stylesheet" href="css\menu_theme8.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Blinker:wght@900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="scripts/anchorme.min.js"></script>
+<script src="scripts/md5.min.js"></script>
+<script src="scripts/register.js"></script>
+<script src="scripts/primus-ircjs.bundle.js"></script>
+<title>Main Menu</title>
+<script>
+$.ajaxSetup({
+    cache: false
+});
+
+var username;
+$( document ).ajaxComplete(function() {
+	$("#SubmitButton").click(function() {
+        // using serialize function of jQuery to get all values of form
+        var serializedData = $("#registrationForm").serialize();
+        // Variable to hold request
+        var request;
+        // Fire off the request to process_registration_form.php
+        request = $.ajax({
+            url: "create_action.php",
+            type: "post",
+            data: serializedData
+        });
+		
+ 
+        // Callback handler that will be called on success
+        request.done(function(jqXHR, textStatus, response) {
+            // you will get response from your php page (what you echo or print)
+             // show successfully for submit message
+			
+            $("#result").html(response);
+        });
+ 
+        // Callback handler that will be called on failure
+        request.fail(function(jqXHR, textStatus, errorThrown) {
+            // Log the error to the console
+            // show error
+            $("#result").html('There is some error while submit');
+            console.error(
+                "The following error occurred: " +
+                textStatus, errorThrown
+            );
+        });
+ 
+        return false;
+ 
+    });
+});
+	$(document).on('click', '#butlogin', function(e){
+		username = $('#uname').val();
+		var password = $('#pwd').val();
+		if(username!="" && password!="" ){
+			$.ajax({
+				url: "testx.php",
+				type: "POST",
+				data: {
+					type: 1,
+					username: username,
+					password: password					
+				},
+				cache: false,
+				success: function(dataResult){
+					console.log('Response:', dataResult)
+					var dataResult = JSON.parse(dataResult);
+					if(dataResult.statusCode==200){
+					//$('#result').html('Logged in!'); 
+                     $('#butlogin').disabled = true;
+                     $(".menu").load("main_menu.php");
+					}
+					else if(dataResult.statusCode==201){
+						$("#error").show();
+						$('#error').html('user not registered!');
+					}
+					
+				}
+			});
+		}
+		else{
+			alert('Please fill all the field !');
+		}
+	});
+	
+	//create_gang
+	$(document).on('click', '#butreg', function(e){
+		var username = $('#uname').val();
+		var email = $('#email').val();
+		var password = $('#pwd').val();
+		var Avatar = $('#Avatar').val();
+		if(username!="" && email!="" && password!="" ){
+			$.ajax({
+				url: "create_action.php",
+				type: "POST",
+				data: {
+					type: 1,
+					username: username,
+					email: email,
+					password: password,	
+                    Avatar: Avatar					
+				},
+				cache: false,
+				success: function(dataResult){
+					console.log('Response:', dataResult)
+					var dataResult = JSON.parse(dataResult);
+					if(dataResult.statusCode==200){
+						//$('#result').html('Registration successful !'); 
+                     $('#butreg').disabled = true;
+                     $(".menu").load("main_menu.php");
+					}
+					else if(dataResult.statusCode==201){
+						$("#error").show();
+						$('#error').html('Email ID already exists !');
+					}
+					
+				}
+			});
+		}
+		else{
+			alert('Please fill all the field !');
+		}
+	});
+		$(document).on('click', '#createGang', function(e){
+		var gang_name = $('#gang_name').val();
+		var gang_tag = $('#gang_tag').val();
+		var gang_motto = $('#gang_motto').val();
+		var gang_bio = $('#gang_bio').val();
+		if(gang_name!="" && gang_tag!="" && gang_motto!="" ){
+			$.ajax({
+				url: "create_gang_action.php",
+				type: "POST",
+				data: {
+					type: 1,
+					gang_name: gang_name,
+					gang_tag: gang_tag,
+					gang_motto: gang_motto,	
+                    gang_bio: gang_bio					
+				},
+				cache: false,
+				success: function(dataResult){
+					console.log('Response:', dataResult)
+					var dataResult = JSON.parse(dataResult);
+					if(dataResult.statusCode==200){
+						//$('#result').html('Registration successful !'); 
+                     $('#butreg').disabled = true;
+                     $(".menu").load("gangs.php");
+					}
+					else if(dataResult.statusCode==201){
+						$("#error").show();
+						$('#error').html('Email ID already exists !');
+					}
+					
+				}
+			});
+		}
+		else{
+			alert('Please fill all the field !');
+		}
+	});
+    
+$(document).ready(function() {
+	var stillAlive = setInterval(function () {
+    /* XHR back to server
+       Example uses jQuery */
+    $.get("stillAlive.php");
+}, 60000);
+$('.menu').load('login.php');
+    // document is loaded and DOM is ready
+});
+$(document).on("click", "#gangs_page", function(){
+       $(".menu").load("gangs.php");
+});
+$(document).on("click", "#test2", function(){
+       $(".menu").load("demo_test2.txt");
+});
+$(document).on("click", "#main_menu", function(){
+       $(".menu").load("main_menu.php");
+});
+$(document).on("click", "#create_gang", function(){
+       $(".menu").load("create_gang.php");
+});
+$(document).on("click", "#Lobby", function(){
+	$( ".menu" ).empty();
+
+	$.getScript( 'scripts/chat.js' )
+.done(function( s, Status ) {
+	RenderChat("irc.irc7.com",
+							   6668,
+							   ">" + username,
+							   "%#Protocol",
+							   "to be continued");
+    console.warn( Status );
+})
+.fail(function( jqxhr, settings, exception ) {
+    console.warn( "Something went wrong"+exception );
+});
+});
+$(document).on("click", "#create_account", function(){
+	
+       $(".menu").load("create_account.php");
+});
+$(document).on("click", "#login", function(){
+
+       $(".menu").load("login.php");
+	   
+});
+
+
+ 
+ 
+// Add remove loading class on body element based on Ajax request status
+$(document).on({
+    ajaxStart: function(){
+       $(".overlay").show();
+    },
+    ajaxStop: function(){
+	     $(".overlay").fadeOut("slow");
+        //$("body").removeClass("loading");
+    }
+});
+</script>
+</head>
+
+
+<body onresize="myFunction()">
+
+<!-- <img class="image0" src="img/saintsrow_logo.png" />-->
+<div id="Container">
+
+<div id="VideoDIV">
+<video autoplay muted inline preload="auto" id="vid">
+</video>
+</div>
+<div id="group">
+ <div id="result"></div>
+<!--<img class="image0" src="img/saintsrow_logo.png" />-->
+<div id="menu" class="menu">
+</div>
+<div id="chat">
+</div>
+</div>
+<script>
+
+function myFunction(x) {
+var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+var height = (window.innerHeight > 0) ? window.innerHeight : screen.Height;
+ document.getElementById("vid").width = width;
+ document.getElementById("vid").height = height;
+ document.getElementById("group").style.width = width;
+ document.getElementById("group").style.height = height;
+}
+
+var x = window.matchMedia("(max-width: 700px)")
+myFunction(x) // Call listener function at run time
+x.addListener(myFunction) // Attach listener function on state changes
+let videoSource = new Array();
+videoSource[0] = 'videos/bario_night.mp4';
+videoSource[1] = 'videos/chinatown_02.mp4';
+videoSource[2] = 'videos/SR_nite_0.mp4';
+videoSource[3] = 'videos/SR_rain_01.mp4';
+let i = 0; // global
+const videoCount = videoSource.length;
+const element = document.getElementById("vid");
+
+function videoPlay(videoNum) {
+    element.setAttribute("src", videoSource[videoNum]);
+    element.autoplay = true;
+    element.load();
+    element.play();
+}
+document.getElementById('vid').addEventListener('ended', myHandler, false);
+
+videoPlay(0); // play the video
+
+function myHandler() {
+    i++;
+    if (i == videoCount) {
+        i = 0;
+        videoPlay(i);
+    } else {
+        videoPlay(i);
+    }
+}
+
+</script>
+</body>
+</html>
+
+istener('ended', myHandler, false);
+
+videoPlay(0); // play the video
+
+function myHandler() {
+    i++;
+    if (i == videoCou0
+
+
+        i = 0;
+        videoPlay(i);
+    } else {
+        videoPlay(i);
+    }
+}
+
+</script>
+</body>
+</html>
+
+istener('ended', myHandler, false);
+
+videoPlay(0); // play the video
+
+function myHandler() {
+    i++;
+    if (i == videoCou

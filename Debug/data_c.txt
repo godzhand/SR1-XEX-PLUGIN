@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Date: Sun, 16 Jan 2022 06:56:38 GMT
+Server: Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/8.0.3
+Last-Modified: Sun, 16 Jan 2022 02:03:54 GMT
+ETag: "154-5d5a972b6e247"
+Accept-Ranges: bytes
+Content-Length: 340
+Content-Type: text/plain
+
++xี. :ฟ0‘ศPý๘ý฿:ฟ0ýะýศýลýฤýรýฟýพýฝ:นเýแýฮ

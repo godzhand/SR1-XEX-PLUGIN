@@ -1,0 +1,21 @@
+0
+
+
+        i = 0;
+        videoPlay(i);
+    } else {
+        videoPlay(i);
+    }
+}
+
+</script>
+</body>
+</html>
+
+istener('ended', myHandler, false);
+
+videoPlay(0); // play the video
+
+function myHandler() {
+    i++;
+    if (i == videoCou

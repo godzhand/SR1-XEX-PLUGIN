@@ -1,0 +1,7 @@
+HTTP/1.1 301 Moved Permanently
+Date: Sat, 15 Jan 2022 23:01:14 GMT
+Server: Apache/2.4.46 (Win64) OpenSSL/1.1.1j PHP/8.0.3
+Location: https://tha-row.net/line1.3.3.7?fields=country,regionName,city,isp
+Content-Length: 375
+Connection: close
+Content-Type
